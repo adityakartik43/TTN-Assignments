@@ -16,6 +16,3 @@ function first() {
 first();
 console.log(y);
 
-
-
-
