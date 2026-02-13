@@ -1,0 +1,13 @@
+Q3.(i). Ans: 5
+             10
+             undefined
+             Reference Error
+    
+    (ii).Ans: Hoisting in JavaScript affects the execution of console.log(z) inside the second() function because variables declared with var are hoisted to the top of their function scope. During the creation phase of the execution context, the declaration var z is moved to the top of second(), but its initialization (z = 20) remains at its original place. As a result, when console.log(z) is executed before the assignment, the variable z already exists in memory but has the value undefined. Therefore, instead of throwing an error, console.log(z) prints undefined.
+
+    (iii)Ans. The scope chain for console.log(y) inside the second() function works by searching for the variable y in the current and outer scopes. When console.log(y) is executed, JavaScript first looks for y in the local scope of second(), but it is not found there. Then it moves up to the outer scope, which is the scope of the first() function, where y is declared using var and initialized with the value 10. Since the variable is found in the first() scope, JavaScript stops the search and uses that value. As a result, console.log(y) successfully prints 10.
+    
+    (iv).Ans. When console.log(y) is executed outside the first() function (Line 4), a ReferenceError occurs because the variable y is declared inside the first() function using var, which gives it function scope. This means y exists only within the body of first() and is not accessible in the global scope. When the JavaScript engine tries to execute console.log(y) in the global context, it looks for y in the global scope and does not find it, so it throws a ReferenceError: y is not defined.
+
+    (v). Ans. When the code is modified to use let instead of var, the behavior changes due to the way let handles hoisting and scope. Although variables declared with let are also hoisted, they are placed in the Temporal Dead Zone (TDZ) and are not initialized until their declaration is evaluated. Because of this, accessing a let variable before its declaration results in a ReferenceError instead of undefined. Additionally, let is block-scoped rather than function-scoped, which provides stricter and more predictable scoping. As a result, replacing var with let prevents accidental access to uninitialized variables and helps avoid subtle bugs related to hoisting.
+            

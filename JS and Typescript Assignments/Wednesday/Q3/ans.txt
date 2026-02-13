@@ -1,0 +1,12 @@
+The bind() method returns a new function with a permanently set this value.
+The first argument defines the "this" context.
+Additional arguments are stored and used when the new function runs.
+The original function is not modified.
+
+
+The call() method invokes the function immediately and sets this to the first argument. Any additional arguments are passed directly to the function.
+
+Basically:
+
+Call -> Immediate execute, one time and faster
+Bind -> Returns a function, reusable
